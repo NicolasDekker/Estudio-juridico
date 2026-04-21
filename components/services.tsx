@@ -55,7 +55,7 @@ export function Services() {
             <Card 
               key={service.id}
               id={service.id}
-              className="group border-border bg-card transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
+              className="group relative overflow-hidden border-border bg-card shadow-none transition-[box-shadow,border-color,transform] duration-300 hover:border-accent/35 hover:shadow-[inset_0_0_0_1px_rgba(255,191,0,0.22),0_12px_40px_-12px_rgba(255,191,0,0.28)] motion-safe:hover:-translate-y-0.5"
             >
               <CardContent className="p-6 lg:p-8">
                 <div className="w-12 h-12 bg-accent/10 border border-accent/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/20 group-hover:border-accent/40 transition-colors">
@@ -78,7 +78,7 @@ export function Services() {
           </p>
           <Card
             id={secondaryService.id}
-            className="group border-border bg-card transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
+            className="group relative overflow-hidden border-border bg-card shadow-none transition-[box-shadow,border-color,transform] duration-300 hover:border-accent/35 hover:shadow-[inset_0_0_0_1px_rgba(255,191,0,0.22),0_12px_40px_-12px_rgba(255,191,0,0.28)] motion-safe:hover:-translate-y-0.5"
           >
             <CardContent className="p-6 lg:p-8">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg border border-accent/20 bg-accent/10 transition-colors group-hover:border-accent/40 group-hover:bg-accent/20">

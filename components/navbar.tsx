@@ -23,7 +23,7 @@ export function Navbar() {
   const [mobilePracticeOpen, setMobilePracticeOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-brand-deep/90 backdrop-blur-md supports-[backdrop-filter]:bg-brand-deep/80">
+    <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-brand-deep/80 backdrop-blur-[10px] supports-[backdrop-filter]:bg-brand-deep/70">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-22 lg:px-8">
         <Link
           href="/"
@@ -115,7 +115,7 @@ export function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/[0.06] bg-brand-deep/98 px-4 py-6 lg:hidden">
+        <div className="border-t border-white/[0.06] bg-brand-deep/85 backdrop-blur-[10px] px-4 py-6 lg:hidden supports-[backdrop-filter]:bg-brand-deep/75">
           <div className="mx-auto flex max-w-7xl flex-col gap-1">
             <Link
               href="#"
