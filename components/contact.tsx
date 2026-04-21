@@ -6,6 +6,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, Clock } from "lucide-react"
 
+const EMAIL_CTA =
+  "https://mail.google.com/mail/?view=cm&fs=1&to="
+const EMAIL_SUBJECT = "Consulta Legal - Estudio Jurídico Dres. Federico"
+
 const contactInfo = [
   {
     icon: Phone,
@@ -128,11 +132,23 @@ export function Contact() {
                     <h4 className="font-semibold text-foreground mb-1">
                       {info.title}
                     </h4>
-                    {info.details.map((detail, i) => (
-                      <p key={i} className="text-muted-foreground text-sm">
-                        {detail}
-                      </p>
-                    ))}
+                    {info.details.map((detail, i) =>
+                      info.title === "Email" ? (
+                        <a
+                          key={i}
+                          href={`${EMAIL_CTA}${encodeURIComponent(detail)}&su=${encodeURIComponent(EMAIL_SUBJECT)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-accent hover:underline"
+                        >
+                          {detail}
+                        </a>
+                      ) : (
+                        <p key={i} className="text-muted-foreground text-sm">
+                          {detail}
+                        </p>
+                      ),
+                    )}
                   </div>
                 </CardContent>
               </Card>

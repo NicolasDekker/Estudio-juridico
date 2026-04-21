@@ -3,17 +3,16 @@ import Image from "next/image"
 
 const footerLinks = {
   servicios: [
-    { name: "Derecho Civil", href: "#" },
-    { name: "Derecho Penal", href: "#" },
-    { name: "Derecho Laboral y ART", href: "#" },
-    { name: "Derecho de Familia", href: "#" },
+    { name: "Derecho Laboral", href: "#area-laboral" },
+    { name: "ART", href: "#area-art" },
+    { name: "Accidentes de Tránsito", href: "#area-transito" },
+    { name: "Derecho de Familia (Divorcios)", href: "#area-familia" },
   ],
   empresa: [
-    { name: "Sobre Nosotros", href: "#" },
+    { name: "Sobre Nosotros", href: "#trayectoria" },
     { name: "Nuestro Equipo", href: "#equipo" },
-    { name: "Testimonios", href: "#testimonios" },
-    { name: "Blog", href: "#" },
-    { name: "Carreras", href: "#" },
+    { name: "Confianza", href: "#confianza" },
+    { name: "Contacto", href: "#contacto" },
   ],
   legal: [
     { name: "Aviso de Privacidad", href: "#" },
@@ -32,19 +31,19 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo.jpeg"
-                alt="Gustavo/Brenda Estudio Jurídico"
+                src="/logo-estudio-3.png"
+                alt="Estudio Jurídico Dres. Federico"
                 width={48}
                 height={48}
-                className="h-10 w-10 rounded-full"
+                className="h-11 w-11 rounded-full object-contain object-center p-1 lg:h-18 lg:w-18"
               />
               <span className="font-serif text-xl font-semibold text-foreground">
-                Estudio Jurídico
+                Estudio Jurídico Dres. Federico
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Bufete de abogados comprometido con la defensa de sus derechos 
-              y la búsqueda de soluciones legales efectivas.
+              Claridad, velocidad y compromiso para defender sus derechos con
+              atención directa de profesionales.
             </p>
             <div className="flex gap-4">
               <a 
@@ -144,7 +143,8 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-accent/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Gustavo/Brenda Estudio Jurídico. Todos los derechos reservados.
+            © {new Date().getFullYear()} Estudio Jurídico Dres. Federico.
+            Todos los derechos reservados.
           </p>
           <p className="text-sm text-muted-foreground">
             Diseñado con excelencia jurídica

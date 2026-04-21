@@ -1,59 +1,103 @@
 import { Button } from "@/components/ui/button"
 
+const WHATSAPP =
+  "https://wa.me/5491173635910?text=Hola%2C%20necesito%20asesoramiento%20legal%20y%20me%20gustar%C3%ADa%20comentarte%20brevemente%20mi%20situaci%C3%B3n"
+const EMAIL_CTA =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=brenfederico88@gmail.com&su=Consulta%20Legal%20-%20Estudio%20Jur%C3%ADdico%20Dres.%20Federico"
+
+const textShadowStrong =
+  "0 2px 28px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.85)"
+const textShadowSoft =
+  "0 2px 20px rgba(0,0,0,0.45), 0 1px 2px rgba(0,0,0,0.7)"
+
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-background">
-        {/* Elegant gold gradient accents */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-        {/* Gold pattern overlay */}
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
+    <section className="relative min-h-[100dvh] overflow-hidden bg-brand-deep">
+      <div className="absolute inset-0 z-0 bg-brand-deep" aria-hidden>
+        <video
+          className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden
+        >
+          <source src="/videos/portada-estudio-juridico.mp4" type="video/mp4" />
+        </video>
+        {/* Lectura en zona de copy; derecha y centro más despejados para mármol, concreto y luz ámbar del video */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-brand-deep/58 via-brand-deep/22 via-50% to-brand-deep/5"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-brand-deep/22 via-transparent to-brand-deep/8"
+          aria-hidden
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full mb-8">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <p className="text-accent font-medium text-sm tracking-wider uppercase">
-              Más de 25 años de experiencia
-            </p>
-          </div>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6 text-balance">
-            Defendemos sus derechos con{" "}
-            <span className="text-accent">excelencia</span> y compromiso
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Somos un bufete de abogados especializado en derecho civil, penal, laboral y mercantil. 
-            Su tranquilidad es nuestra prioridad.
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-4 pb-28 pt-28 sm:px-6 sm:pt-32 md:px-8 md:pb-32 md:pt-36 lg:pb-36 lg:pt-40">
+        <div className="max-w-4xl">
+          <p
+            className="mb-10 font-sans text-xs font-medium uppercase tracking-[0.38em] text-accent sm:mb-12 sm:text-sm"
+            style={{ textShadow: textShadowSoft }}
+          >
+            Arquitectura de la justicia
           </p>
-          <div className="flex justify-center">
-            <a 
-              href="https://wa.me/5491173635910?text=Hola%2C%20necesito%20asesoramiento%20legal%20y%20me%20gustar%C3%ADa%20comentarte%20brevemente%20mi%20situaci%C3%B3n"
+
+          <div className="mb-12 border-l-2 border-accent pl-6 sm:mb-16 sm:pl-10 md:pl-14">
+            <h1
+              className="font-serif text-[2.85rem] font-medium leading-[1.04] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+              style={{ textShadow: textShadowStrong }}
+            >
+              Justicia rápida.
+              <span
+                className="mt-3 block text-accent sm:mt-4"
+                style={{ textShadow: textShadowStrong }}
+              >
+                Claridad total.
+              </span>
+              <span className="mt-3 block sm:mt-4">Resultados reales.</span>
+            </h1>
+          </div>
+
+          <p
+            className="max-w-xl font-sans text-base leading-relaxed text-white/90 sm:text-lg md:text-xl md:leading-relaxed"
+            style={{ textShadow: textShadowSoft }}
+          >
+            Más de 20 años de experiencia técnica para proteger tus derechos.
+            Sin vueltas, sin lenguaje complicado y con contacto directo.
+          </p>
+
+          <div className="mt-16 flex flex-col gap-5 sm:mt-20 sm:flex-row sm:items-center sm:gap-8">
+            <Button
+              asChild
+              size="lg"
+              className="h-12 rounded-sm bg-accent px-8 font-semibold tracking-wide text-accent-foreground shadow-none hover:bg-accent/90"
+            >
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+                Consulta Urgente por WhatsApp
+              </a>
+            </Button>
+            <a
+              href={EMAIL_CTA}
               target="_blank"
               rel="noopener noreferrer"
+              className="text-center text-sm font-medium text-white/70 underline-offset-8 transition-colors hover:text-white sm:text-left"
+              style={{ textShadow: textShadowSoft }}
             >
-              <Button 
-                size="lg" 
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8 shadow-lg shadow-accent/20"
-              >
-                Consultá
-              </Button>
+              Contactar por Email
             </a>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-accent/40 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-accent/60 rounded-full mt-2" />
+      <div
+        className="pointer-events-none absolute bottom-10 left-1/2 z-10 hidden -translate-x-1/2 md:block"
+        aria-hidden
+      >
+        <div className="flex h-12 w-7 items-start justify-center rounded-full border border-white/20 pt-2">
+          <div className="h-2 w-0.5 animate-pulse rounded-full bg-accent/80" />
         </div>
       </div>
     </section>

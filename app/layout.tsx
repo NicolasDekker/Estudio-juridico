@@ -13,8 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'García & Asociados | Bufete de Abogados',
-  description: 'Expertos en derecho civil, penal, laboral y mercantil. Más de 25 años de experiencia protegiendo sus derechos.',
+  title: 'Estudio Jurídico Dres. Federico | Claridad y Respuesta Rápida',
+  description:
+    'Estudio Jurídico Dres. Federico. Derecho Laboral, ART, Accidentes de Tránsito y Familia con atención directa, claridad total y respuesta rápida por WhatsApp.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -41,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
