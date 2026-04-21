@@ -1,13 +1,7 @@
-import { loadEnvConfig } from "@next/env"
 import { NextResponse, type NextRequest } from "next/server"
 import nodemailer from "nodemailer"
 import { Resend } from "resend"
 import { contactFormSchema } from "@/lib/validations/contact"
-
-/** En desarrollo, fuerza la lectura de `.env.local` antes de evaluar la API key (evita orden raro de inyección con Turbopack). En producción (Vercel) las variables vienen del runtime. */
-if (process.env.NODE_ENV === "development") {
-  loadEnvConfig(process.cwd())
-}
 
 /** Correo que recibe los mensajes del formulario (único destinatario vía Resend). */
 const NOTIFICATION_EMAIL = "brenfederico88@gmail.com"
