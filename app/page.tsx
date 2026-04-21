@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
-import { Stats } from "@/components/stats"
+import { Trayectoria } from "@/components/trayectoria"
+import { Confianza } from "@/components/confianza"
 import { Team } from "@/components/team"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -12,7 +13,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
-      <Stats />
+      <Trayectoria />
+      <Confianza />
       <Team />
       <Contact />
       <Footer />

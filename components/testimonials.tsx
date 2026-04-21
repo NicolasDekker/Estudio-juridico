@@ -3,7 +3,7 @@ import { Quote } from "lucide-react"
 
 const testimonials = [
   {
-    quote: "El equipo de García & Asociados manejó mi caso de divorcio con gran profesionalismo y sensibilidad. Siempre me mantuvieron informado y lograron un resultado favorable para mi familia.",
+    quote: "El equipo de Estudio Jurídico Dres. Federico manejó mi caso de divorcio con gran profesionalismo y sensibilidad. Siempre me mantuvieron informado y lograron un resultado favorable para mi familia.",
     author: "Roberto Méndez",
     role: "Cliente - Derecho de Familia",
   },
