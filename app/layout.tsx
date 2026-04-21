@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { AppToaster } from '@/components/app-toaster'
 import './globals.css'
 
 const playfair = Playfair_Display({ 
@@ -13,26 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Estudio Jurídico Dres. Federico | Claridad y Respuesta Rápida',
+  title: 'Dres. Federico | Estudio Jurídico Especialista',
   description:
     'Estudio Jurídico Dres. Federico. Derecho Laboral, ART, Accidentes de Tránsito y Familia con atención directa, claridad total y respuesta rápida por WhatsApp.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: [{ url: '/icon-dark.png', type: 'image/png' }],
+    apple: '/icon-dark.png',
   },
 }
 
@@ -45,6 +32,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
+        <AppToaster />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

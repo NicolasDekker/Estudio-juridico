@@ -12,7 +12,7 @@ const textShadowSoft =
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden bg-brand-deep">
+    <section className="relative min-h-[calc(100dvh-4rem)] overflow-hidden bg-brand-deep lg:min-h-[calc(100dvh-5.5rem)]">
       <div className="absolute inset-0 z-0 bg-brand-deep" aria-hidden>
         <video
           className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
@@ -36,7 +36,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-4 pb-28 pt-28 sm:px-6 sm:pt-32 md:px-8 md:pb-32 md:pt-36 lg:pb-36 lg:pt-40">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-4rem)] max-w-7xl flex-col justify-center px-4 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-20 md:px-8 md:pb-32 md:pt-24 lg:min-h-[calc(100dvh-5.5rem)] lg:pb-36 lg:pt-28">
         <div className="max-w-4xl">
           <p
             className="mb-10 font-sans text-xs font-medium uppercase tracking-[0.38em] text-accent sm:mb-12 sm:text-sm"

@@ -41,9 +41,12 @@ export function Trayectoria() {
 
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
           {highlights.map((item) => (
-            <Card key={item.title} className="border-border bg-card">
+            <Card
+              key={item.title}
+              className="group relative overflow-hidden border-border bg-card shadow-none transition-[box-shadow,border-color,transform] duration-300 hover:border-accent/35 hover:shadow-[inset_0_0_0_1px_rgba(255,191,0,0.22),0_12px_40px_-12px_rgba(255,191,0,0.28)] motion-safe:hover:-translate-y-0.5"
+            >
               <CardContent className="p-6 lg:p-7">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-accent/25 bg-accent/10">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-accent/25 bg-accent/10 transition-colors group-hover:border-accent/40 group-hover:bg-accent/20">
                   <item.icon className="h-6 w-6 text-accent" />
                 </div>
                 <h3 className="mb-3 font-serif text-xl font-semibold text-foreground">
